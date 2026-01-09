@@ -1,222 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gearblock Minecraft Server</title>
-
-  <link rel="icon" type="image/png" href="media/favicon.png">
-  <link rel="stylesheet" href="media/style.css">
-  <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gearblock Network</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- NAV -->
+  <header>
+    <h1>GEARBLOCK</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#modes">Minigames</a>
+      <a href="#rules">Rules</a>
+      <a href="#hof">Hall of Fame</a>
+      <a href="#staff">Staff</a>
+      <a href="https://discord.gg/KWtAD5hbMj" target="_blank">Discord</a>
+    </nav>
+  </header>
 
-<!-- NAVBAR -->
-<nav class="desktop_navbar">
-  <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-  <a href="#more" class="desktop_navbar_link scroll">Features</a>
-  <a href="#gamemodes" class="desktop_navbar_link scroll">Gamemodes</a>
-  <a href="#discord" class="desktop_navbar_link scroll">Community</a>
-  <a href="#staff" class="desktop_navbar_link scroll">Staff</a>
-  <div class="desktop_navbar_link2_div">
-    <a href="#join" class="desktop_navbar_link2 scroll">Join Gearblock</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<div class="main1">
-  <img class="main1_logo" src="media/logo.png" alt="Gearblock">
-  <div class="main1_description">
-    <a>Minecraft,<br>done</a>
-    <a class="main1_actcent">the Gearblock way</a><a>.</a>
-  </div>
-
-  <button class="main1_ipcopier" onclick="copyText()" type="button">
-    <span class="main1_ipcopier_text1">gearblock.exaroton.me</span><br>
-    <span class="main1_ipcopier_text2">Click to copy</span>
-  </button>
-</div>
-
-<script>
-function copyText() {
-  navigator.clipboard.writeText("gearblock.exaroton.me");
-}
-</script>
-
-<!-- FEATURES -->
-<div id="more"></div>
-<div class="main2">
-  <a class="headline">What We Offer</a>
-
-  <div class="main2_features_div">
-
-    <div class="main2_feature">
-      <img src="media/Survival.png" alt="Survival" class="feature_img">
-      <a class="main2_feature_headline">Survival SMP</a>
-      <a class="main2_feature_text">Balanced survival with economy, claims, and progression.</a>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <h2>Welcome to Gearblock!</h2>
+    <p>Java & Bedrock Crossplay • Always Growing • Always Updating</p>
+    <div class="ip_box">
+      <p class="ip">IP: play.gearblock.net</p>
     </div>
+  </section>
 
-    <div class="main2_feature">
-      <img src="media/minigame.png" alt="Minigames" class="feature_img">
-      <a class="main2_feature_headline">Minigames</a>
-      <a class="main2_feature_text">Fast-paced games with rewards and leaderboards.</a>
+  <!-- MODES -->
+  <section id="modes">
+    <h2>Featured Minigames</h2>
+    <div class="card_row">
+
+      <div class="card">
+        <img src="Pvp1.png" alt="PvP">
+        <h3>Last Man Standing</h3>
+        <p>Fight until only YOU remain.</p>
+      </div>
+
+      <div class="card">
+        <img src="Pvp1.png" alt="Boat">
+        <h3>Ice Boat Racing</h3>
+        <p>Slippery speed and tight turns.</p>
+      </div>
+
+      <div class="card">
+        <img src="Pvp1.png" alt="Clutch">
+        <h3>MLG Practice</h3>
+        <p>Learn water, hay, ladders & more.</p>
+      </div>
+
+      <div class="card">
+        <img src="Pvp1.png" alt="TNT">
+        <h3>TNT Run</h3>
+        <p>Blocks vanish under your feet.</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="main2_feature">
-      <img src="media/Pvp1.png" alt="PvP" class="feature_img">
-      <a class="main2_feature_headline">PvP</a>
-      <a class="main2_feature_text">Fair combat, kits, and competitive arenas.</a>
-    </div>
+  <!-- RULES -->
+  <section id="rules">
+    <h2>Server Rules</h2>
+    <ul class="list">
+      <li>No griefing or stealing.</li>
+      <li>No hacks, cheats, or exploits.</li>
+      <li>Be respectful to all players & staff.</li>
+      <li>No lag machines or spam redstone.</li>
+      <li>No advertising other servers.</li>
+      <li>Keep builds appropriate.</li>
+      <li>Follow staff directions when given.</li>
+      <li>Have fun and play fair!</li>
+    </ul>
+  </section>
 
-    <div class="main2_feature">
-      <img src="media/Creative.png" alt="Creative" class="feature_img">
-      <a class="main2_feature_headline">Creative</a>
-      <a class="main2_feature_text">Plot-based creative building with freedom.</a>
-    </div>
+  <!-- HALL OF FAME -->
+  <section id="hof">
+    <h2>Hall Of Fame</h2>
 
-    <div class="main2_feature">
-      <img src="media/adwen.png" alt="Active Staff" class="feature_img">
-      <a class="main2_feature_headline">Active Staff</a>
-      <a class="main2_feature_text">Friendly moderation and fast support.</a>
-    </div>
-  </div>
-</div>
+    <h3>Top Players</h3>
+    <ul class="list">
+      <li>Most Played — 6Kamali</li>
+      <li>Most XP — Voidz</li>
+      <li>First Join — Kamali</li>
+    </ul>
 
-<!-- GAMEMODES -->
-<div id="gamemodes"></div>
-<div class="main6">
-  <a class="headline">Gamemodes</a>
+    <h3>Achievements</h3>
+    <ul class="list">
+      <li>Best Builder — A_Adwen</li>
+      <li>Most Helpful — EJP1014</li>
+      <li>Fastest XP Day — Kamali</li>
+    </ul>
+  </section>
 
-  <div class="main6_modes">
-    <div class="main6_mode">
-      <a class="main6_mode_title">Survival SMP</a>
-      <a class="main6_mode_desc">Classic progression with player economy.</a>
-    </div>
-    <div class="main6_mode">
-      <a class="main6_mode_title">Minigames</a>
-      <a class="main6_mode_desc">Spleef, TNT Run, Ice Boat Racing, Hide & Seek and more.</a>
-    </div>
-    <div class="main6_mode">
-      <a class="main6_mode_title">PvP Arena</a>
-      <a class="main6_mode_desc">Fair kits with duel queues and clan battles.</a>
-    </div>
-    <div class="main6_mode">
-      <a class="main6_mode_title">Creative</a>
-      <a class="main6_mode_desc">Plot based world, unlimited building.</a>
-    </div>
-  </div>
-</div>
+  <!-- STAFF -->
+  <section id="staff">
+    <h2>Staff Team</h2>
 
-<!-- DISCORD -->
-<div id="discord"></div>
-<div class="main4">
-  <a class="headline">Join the Discord</a>
-  <a href="https://discord.gg/KWtAD5hbMj" class="main4_dc_button">Join Community</a>
-</div>
+    <div class="staff_row">
+      <div class="staff_card">
+        <h3>Kamali</h3>
+        <p>Owner</p>
+      </div>
 
-<!-- STAFF -->
-<div id="staff"></div>
-<div class="main5">
-  <a class="headline">Gearblock Staff</a>
+      <div class="staff_card">
+        <h3>EthanCP2010</h3>
+        <p>Moderator</p>
+      </div>
 
-  <div class="main5_admin_div">
+      <div class="staff_card">
+        <h3>EJP1014</h3>
+        <p>Trial</p>
+      </div>
 
-    <!-- OWNER -->
-    <div class="main5_admins_div main5_admins_dev_type2">
-      <img class="main5_admins_img" src="media/001.png" alt="Owner">
-      <div class="main5_admins_description_div">
-        <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
-        <a class="main5_admins_description_title">6kamali</a>
-        <a class="main5_admins_description">Server Owner<br>Founder of Gearblock</a>
+      <div class="staff_card">
+        <h3>az7tj</h3>
+        <p>Trial</p>
+      </div>
+
+      <div class="staff_card">
+        <h3>WhiskeySixx</h3>
+        <p>Trial</p>
+      </div>
+
+      <div class="staff_card">
+        <h3>A_Adwen</h3>
+        <p>Builder</p>
       </div>
     </div>
+  </section>
 
-    <!-- CO-OWNER -->
-    <div class="main5_admins_div main5_admins_dev_type2">
-      <img class="main5_admins_img" src="media/ethan2.png" alt="Co-Owner">
-      <div class="main5_admins_description_div">
-        <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Co-Owner]</a>
-        <a class="main5_admins_description_title">Ethancp2020</a>
-        <a class="main5_admins_description">Server Management<br>Support & Development</a>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="main5_supporter_div">
-
-    <!-- MOD -->
-    <div class="main5_supporters_div">
-      <img class="main5_supporters_img" src="media/adwen.png" alt="Mod">
-      <div class="main5_supporters_description_div">
-        <a class="main5_supporters_description_rank">[Moderator]</a>
-        <a class="main5_supporters_description_title">A_Adwen</a>
-        <a class="main5_supporters_description">Moderation<br>Community Support</a>
-      </div>
-    </div>
-
-    <!-- TMOD AJ -->
-    <div class="main5_supporters_div">
-      <img class="main5_supporters_img" src="media/member_placeholder.webp" alt="Trial Mod">
-      <div class="main5_supporters_description_div">
-        <a class="main5_supporters_description_rank">[Trial Mod]</a>
-        <a class="main5_supporters_description_title">Aj</a>
-        <a class="main5_supporters_description">Learning Moderation<br>Helping Players</a>
-      </div>
-    </div>
-
-    <!-- TMOD EJP -->
-    <div class="main5_supporters_div">
-      <img class="main5_supporters_img" src="media/ejp.png" alt="Trial Mod">
-      <div class="main5_supporters_description_div">
-        <a class="main5_supporters_description_rank">[Trial Mod]</a>
-        <a class="main5_supporters_description_title">Ejp</a>
-        <a class="main5_supporters_description">Learning Moderation<br>Helping Players</a>
-      </div>
-    </div>
-
-    <!-- BUILDER -->
-    <div class="main5_supporters_div">
-      <img class="main5_supporters_img" src="media/adwen.png" alt="Builder">
-      <div class="main5_supporters_description_div">
-        <a class="main5_supporters_description_rank">[Builder]</a>
-        <a class="main5_supporters_description_title">A_Adwen</a>
-        <a class="main5_supporters_description">Map Design<br>Build Creation</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- JOIN -->
-<div id="join"></div>
-<div class="main3">
-  <a class="headline">How to Join</a>
-
-  <div class="main3_join_div_div">
-    <div class="main3_join_div">
-      <a class="main3_join_title">Java</a>
-      <a>IP: gearblock.exaroton.me</a>
-      <a>Version: 1.20.1+</a>
-    </div>
-    <div class="main3_join_div">
-      <a class="main3_join_title">Bedrock</a>
-      <a>IP: gearblock.exaroton.me</a>
-      <a>Port: 19132</a>
-    </div>
-  </div>
-</div>
-
-<footer class="copyright_div">
-  <a class="copyright">© Gearblock Minecraft Server</a>
-  <a href="https://discord.gg/KWtAD5hbMj" class="footer_discord">
-    <i class="fa fa-discord"></i> Discord
-  </a>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Gearblock Network</p>
+  </footer>
 
 </body>
 </html>
