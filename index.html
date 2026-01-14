@@ -1,179 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kill yourself kamali</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Collapse</title>
 
-  <link rel="icon" type="image/png" href="media/favi2con.png">
-  <link rel="stylesheet" href="media/style.css">
-  <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="media/favi2con.png">
+<link rel="stylesheet" href="media/style.css">
+<link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 </head>
-
-<body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- NAVBAR -->
-<nav class="desktop_navbar">
-  <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-  <a href="#more" class="desktop_navbar_link scroll">Features</a>
-  <a href="#gm" class="desktop_navbar_link scroll">Gamemodes</a>
-  <a href="#rules" class="desktop_navbar_link scroll">Rules</a>
-  <a href="#hof" class="desktop_navbar_link scroll">Hall of Fame</a>
-  <a href="#discord" class="desktop_navbar_link scroll">Community</a>
-  <a href="#staff" class="desktop_navbar_link scroll">Staff</a>
-  <div class="desktop_navbar_link2_div">
-    <a href="#join" class="desktop_navbar_link2 scroll">Join Gearblock</a>
-  </div>
-</nav>
+<body class="collapsebody">
 
 <!-- HERO -->
 <div class="main1 glitch superglitch">
-  <img class="main1_logo" src="media/logo.png" alt="Gearblock" style="filter:invert(1) contrast(200%);">
+  <img class="main1_logo" src="media/logo.png" alt="Gearblock" style="filter:invert(1) hue-rotate(180deg) contrast(300%);">
   <div class="main1_description">
-    <a class="glitchybig">G̷͓͐E̵̩̒A̸̟̒R̶̺̓B̷̩͝L̶̹̈́O̸͖͑Č̷̯K̸̭͆ ̶̼́H̷̰̔Ǎ̴̻S̴̨͂ ̸͉͝F̴̢̈́Á̷̗Ļ̸̇Ḽ̶́E̵͇͝N̶̠̒</a><br>
-    <a class="main1_actcent glitch">p̶u̶r̶g̶e̶ e̶n̶a̶b̶l̶e̶d̶</a>
+    <a class="glitchybig">G̴E̵A̶R̶B̵L̸O̷C̷K̴ :̶ ̷T̵H̴E̶ ̴C̴O̵L̴L̶A̶P̵S̷E̸</a><br>
+    <a class="main1_actcent glitch">p̸͓o̷͓w̶͓e̵͓r̶͓ s̸͓e̷͓i̶͓z̷͓e̵͓d̷͓</a>
   </div>
-
-  <button class="main1_ipcopier glitchbtn" onclick="copyText()" type="button">
-    <span class="main1_ipcopier_text1">g̵e̸a̵r̵b̸l̸o̵c̷k̵.̶e̶x̸a̵r̶o̵t̶o̶n̵.̸m̶e̴</span><br>
-    <span class="main1_ipcopier_text2">c̷l̶i̵c̸k̴ ̶t̷o̵ ̷c̶o̸p̴y̶… i̸f̴ y̵o̴u̷ c̵a̶n̷</span>
-  </button>
 </div>
 
+<!-- MULTIPLE HACKER PANELS -->
+<div id="console-container"></div>
+
 <script>
-function copyText() {
-  navigator.clipboard.writeText("gearblock.exaroton.me");
-  alert("A͘c͘c͘e͘s͘s͘ g͘r͘a͘n͘t͘e͘d͘.͘ P͘u͘r͘g͘e͘ y͘o͘u͘r͘ o͘w͘n͘ w͘a͘y͘.͘");
+// Hacker code characters
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:',.<>?/`~";
+
+// Create multiple panels
+const consoleContainer = document.getElementById("console-container");
+const panelCount = 6; // number of panels
+
+for (let i = 0; i < panelCount; i++) {
+    const panel = document.createElement("pre");
+    panel.className = "hacker-panel";
+    panel.style.top = Math.random() * 80 + "vh";
+    panel.style.left = Math.random() * 90 + "vw";
+    panel.style.fontSize = (12 + Math.random()*8) + "px";
+    consoleContainer.appendChild(panel);
+
+    // Scroll random code
+    function randomCodeLine() {
+        let line = '';
+        const len = Math.floor(Math.random()*60) + 20;
+        for (let j = 0; j < len; j++) {
+            line += chars.charAt(Math.floor(Math.random()*chars.length));
+        }
+        return line;
+    }
+
+    function updatePanel() {
+        panel.textContent = "";
+        const lines = 20;
+        for (let k = 0; k < lines; k++) {
+            panel.textContent += randomCodeLine() + "\n";
+        }
+    }
+
+    setInterval(updatePanel, 150 + Math.random()*100);
+    updatePanel();
 }
 </script>
 
-<!-- TAKEOVER WARNING -->
-<div class="main2 hazard glitch superglitch">
-  <a class="headline glitchybig">▇▇ SYSTEM OVERRIDE ▇▇</a>
-  <p class="main_warning glitch">
-    T̶h̶i̶s̷ ̶s̶e̶r̶v̶e̷r̶ ̵i̶s̷ ̷n̵o̸ ̷l̵o̸n̷g̴e̶r̷ ̶u̵n̵d̶e̴r̵ ̶o̴w̷n̸e̸r̶ ̶c̶o̸n̶t̸r̶o̵l̷.̸
-  </p>
-</div>
-
-<!-- CHAOS FEED -->
-<div class="main2 chaosfeed">
-  <div class="main2_features_div" style="max-width:950px; margin:auto; text-align:center;">
-
-    <div class="main2_feature glitch">
-      <a class="main2_feature_headline glitcheffect">⚠ ROOT ACCESS BREACHED ⚠</a>
-      <a class="main2_feature_text">
-        p̸e̶r̶m̸i̵s̶s̵i̷o̵n̶ ̵t̷r̷e̶e̶ s̸h̸a̶t̴t̸e̷r̶e̴d̴.<br>
-        r̶o̵o̵t̷ a̷b̶a̶n̶d̶o̸n̸e̴d̵.̶<br>
-        d̴e̴l̴e̷t̵e̵d̶:̷ c̶o̵n̶t̵r̴o̷l̶.̷a̵l̸l̶
-      </a>
-    </div>
-
-    <div class="main2_feature glitch">
-      <a class="main2_feature_headline glitcheffect">🩸 STAFF PURGE COMPLETE</a>
-      <a class="main2_feature_text">
-        [ x ] Owner<br>
-        [ x ] Admin<br>
-        [ x ] Moderation<br>
-        [ x ] Helpers<br><br>
-        l̵e̸g̵a̶c̶y̷ r̶e̴m̷o̸v̶e̷d̵
-      </a>
-    </div>
-
-    <div class="main2_feature glitch">
-      <a class="main2_feature_headline glitcheffect">🔥 WORLD UNLOCKED</a>
-      <a class="main2_feature_text">
-        s̶p̴a̵w̴n̸:̴ a̶n̵y̵t̴h̸i̶n̶g̷<br>
-        b̸u̶r̵n̴:̶ e̶v̶e̵r̵y̸t̵h̶i̶n̵g̴<br>
-        r̸e̴w̴r̷i̸t̵e̷ t̸h̸e̶ c̷o̷r̶e̵
-      </a>
-    </div>
-
-    <div class="main2_feature glitch">
-      <a class="main2_feature_headline glitcheffect">🗡 PLAYER VS PLAYER VS WORLD</a>
-      <a class="main2_feature_text">
-        n̷o̵ ̵s̸a̶f̷e̵ z̷o̸n̶e̷s̶<br>
-        n̶o̸ p̴r̶o̵t̶e̶c̷t̵i̶o̷n̶<br>
-        i̷t̶'̷s̸ y̴o̶u̵ o̶r̷ t̷h̷e̶ v̶o̵i̷d̷
-      </a>
-    </div>
-
-    <div class="main2_feature glitch">
-      <a class="main2_feature_headline glitcheffect">📡 SIGNAL FROM UNKNOWN USER</a>
-      <a class="main2_feature_text">
-        i̴ ̵a̶m̴ h̶e̵r̶e̶.<br>
-        y̵o̴u̴ ̵l̷o̶s̴t̷ t̵h̶i̶s̴.<br>
-        y̴o̴u̶ ̵c̷a̵n̴'̵t̵ ̸t̷a̷k̵e̴ i̶t̷ b̸a̵c̴k̴.
-      </a>
-    </div>
-
-  </div>
-</div>
-
-<!-- DEAD SERVER DECLARATION -->
-<div class="main6 glitch superglitch" style="text-align:center; padding:50px; color:#ff2222; font-size:1.4rem;">
-  <h2 class="headline glitchybig">G̶E̷A̶R̵B̴L̶O̵C̶K̷ ̶E̵N̶D̷S̷ T̴O̵N̸I̶G̵H̶T̵</h2>
-  <p>t̶h̵e̷ ̷d̴a̷t̶a̸ ̵i̵s̵ ̷r̸o̸t̵t̶i̵n̴g̶<br>t̵h̴e̶ ̶w̶o̵r̶l̷d̸ ̶i̷s̷ ̵c̵r̶y̵i̷n̶g̷<br>b̴u̵t̴ ̶y̸o̴u̵ ̵c̶a̴n̷ ̶s̷t̷i̴l̶l̵ b̷u̶r̴n̴ i̶t̸ d̸o̶w̶n̷</p>
-</div>
-
-<!-- JOIN -->
-<div class="main3 glitch">
-  <a class="headline glitchybig">ENTER THE RUINS</a>
-  <div class="main3_join_div_div">
-    <div class="main3_join_div">
-      <a class="main3_join_title">Java</a>
-      <a>IP: gearblock.exaroton.me</a>
-      <a>Version: 1.20+</a>
-    </div>
-    <div class="main3_join_div">
-      <a class="main3_join_title">Bedrock</a>
-      <a>IP: gearblock.exaroton.me</a>
-      <a>Port: 19132</a>
-    </div>
-  </div>
-  <p class="glitch" style="margin-top:20px; font-size:1.3rem;">g̶o̵o̶d̶b̵y̷e̷ ̶g̸e̵a̶r̷b̵l̶o̷c̵k̶</p>
-</div>
-
 <!-- STYLES -->
 <style>
+body.collapsebody {
+    background:black;
+    color:#0f0;
+    font-family: monospace;
+    overflow-x:hidden;
+}
+
 .glitch, .superglitch, .glitcheffect {
-  text-shadow: 2px 0 red, -2px 0 #00ff00, 0 2px #0000ff;
-  animation: glitch 0.25s infinite;
+    text-shadow:2px 0 red, -2px 0 #00ff00, 0 2px #00ffff;
+    animation:glitch .18s infinite;
 }
-.glitchybig {
-  font-size:2.5rem;
-  letter-spacing:3px;
+
+.glitchybig { font-size:2.6rem; letter-spacing:3px; }
+.superglitch { animation:glitch .08s infinite alternate; }
+
+#console-container {
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:999;
 }
-.superglitch { animation: glitch 0.1s infinite alternate; }
-.glitchbtn { background:#ff0000c4; border:2px solid black; }
+
+.hacker-panel {
+    position:absolute;
+    color:#0f0;
+    background:rgba(0,0,0,0.1);
+    padding:5px;
+    border:1px solid #0f0;
+    overflow:hidden;
+    line-height:1;
+    white-space:pre;
+    user-select:none;
+    pointer-events:none;
+    mix-blend-mode:screen;
+}
 
 @keyframes glitch {
-  0% { transform:translate(0,0) skew(0deg);}
-  20% { transform:translate(-3px,2px) skew(-3deg);}
-  40% { transform:translate(3px,-2px) skew(3deg);}
-  60% { transform:translate(-1px,1px) skew(1deg);}
-  80% { transform:translate(2px,-1px) skew(-1deg);}
-  100% { transform:translate(0,0) skew(0deg);}
+    0%{transform:translate(0,0) skew(0deg);}
+    20%{transform:translate(-3px,3px) skew(-4deg);}
+    40%{transform:translate(4px,-3px) skew(3deg);}
+    60%{transform:translate(-2px,1px) skew(2deg);}
+    80%{transform:translate(3px,-1px) skew(-2deg);}
+    100%{transform:translate(0,0) skew(0deg);}
 }
-
-@keyframes flicker {
-  0%,100%{opacity:1;}
-  50%{opacity:0.5;}
-}
-body{animation:flicker 5s infinite;}
 </style>
-
-
-<footer class="copyright_div">
-  <a class="copyright">© Gearblock Minecraft Server</a>
-  <a href="https://discord.gg/KWtAD5hbMj" class="footer_discord">
-    <i class="fa fa-discord"></i> Discord
-  </a>
-</footer>
 
 </body>
 </html>
-
