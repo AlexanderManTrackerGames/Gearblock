@@ -13,12 +13,24 @@
 <body class="collapsebody">
 
 <!-- HERO -->
-<div class="main1 glitch superglitch">
-  <img class="main1_logo" src="media/logo.png" alt="Gearblock" style="filter:invert(1) hue-rotate(180deg) contrast(300%);">
-  <div class="main1_description">
-    <a class="glitchybig">G̴E̵A̶R̶B̵L̸O̷C̷K̴ :̶ ̷T̵H̴E̶ ̴C̴O̵L̴L̶A̶P̵S̷E̸</a><br>
-    <a class="main1_actcent glitch">p̸͓o̷͓w̶͓e̵͓r̶͓ s̸͓e̷͓i̶͓z̷͓e̵͓d̷͓</a>
+<div class="main1 glitch superglitch falling">
+  <img class="main1_logo broken" src="media/logo.png" alt="Gearblock" style="filter:invert(1) hue-rotate(180deg) contrast(300%);">
+  <div class="main1_description shattered">
+    <a class="glitchybig">G̴E̷A̷R̸B̶L̶O̷C̶K̵ C̵O̶M̸P̴R̷O̶M̶I̷S̴E̶D̷</a><br>
+    <a class="main1_actcent glitch">s̶͓t̵͓a̶͓f̸͓f̸͓ ̴͓b̶͓a̶͓n̴͓n̵͓e̴͓d̷</a>
   </div>
+</div>
+
+<!-- CORRUPT SERVER STATUS -->
+<div class="panelmsg glitcheffect falling">
+<p class="breaktext">
+S̷̯͝Y̶̬̑Ś̴̗T̷̜͌E̴̙̾M̸͎̋ ̴̞̚B̴̗̕R̶͎̉È̵̝Ȁ̷̪C̸̤͛H̴͈͠ ███  
+STAFF = BANNED / REMOVED / WIPED  
+PLAYERS = FORCE OPPED (NO CONTROL)  
+PLUGIN WALLS = DOWN  
+CONSOLE = HIJACKED  
+WORLD = CORRUPTING  
+</p>
 </div>
 
 <!-- MULTIPLE HACKER PANELS -->
@@ -30,15 +42,16 @@ const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#
 
 // Create multiple panels
 const consoleContainer = document.getElementById("console-container");
-const panelCount = 6;
+const panelCount = 8;
 
 for (let i = 0; i < panelCount; i++) {
     const panel = document.createElement("pre");
-    panel.className = "hacker-panel";
-    panel.style.position = "absolute"; // changed from fixed
-    panel.style.top = Math.random() * 2000 + "px"; // allow scrolling
+    panel.className = "hacker-panel falling";
+    panel.style.position = "absolute"; 
+    panel.style.top = Math.random() * 2000 + "px"; 
     panel.style.left = Math.random() * 90 + "vw";
     panel.style.fontSize = (12 + Math.random()*8) + "px";
+    panel.style.animationDelay = Math.random()*3 + "s";
     consoleContainer.appendChild(panel);
 
     function randomCodeLine() {
@@ -68,9 +81,19 @@ body.collapsebody {
     background:black;
     color:#0f0;
     font-family: monospace;
-    overflow-y: scroll; /* allow vertical scrolling */
+    overflow-y: scroll;
 }
 
+/* Falling apart effects */
+.falling {
+    animation: fallApart 3s infinite linear alternate;
+    display:inline-block;
+}
+.broken { filter:blur(.5px) brightness(300%); }
+.shattered { letter-spacing:6px; }
+.breaktext { opacity:.85; }
+
+/* glitch */
 .glitch, .superglitch, .glitcheffect {
     text-shadow:2px 0 red, -2px 0 #00ff00, 0 2px #00ffff;
     animation:glitch .18s infinite;
@@ -79,10 +102,19 @@ body.collapsebody {
 .glitchybig { font-size:2.6rem; letter-spacing:3px; }
 .superglitch { animation:glitch .08s infinite alternate; }
 
+.panelmsg {
+    padding:1rem;
+    border:1px dashed #0f0;
+    margin:3rem auto;
+    width:90%;
+    max-width:600px;
+    background:rgba(0,0,0,0.4);
+}
+
 #console-container {
-    position: relative; /* changed from fixed */
+    position: relative;
     width:100%;
-    height:auto; /* allow container height to expand */
+    height:auto;
 }
 
 .hacker-panel {
@@ -98,6 +130,7 @@ body.collapsebody {
     mix-blend-mode:screen;
 }
 
+/* Keyframes */
 @keyframes glitch {
     0%{transform:translate(0,0) skew(0deg);}
     20%{transform:translate(-3px,3px) skew(-4deg);}
@@ -105,6 +138,11 @@ body.collapsebody {
     60%{transform:translate(-2px,1px) skew(2deg);}
     80%{transform:translate(3px,-1px) skew(-2deg);}
     100%{transform:translate(0,0) skew(0deg);}
+}
+
+@keyframes fallApart {
+    from{transform:rotate(0deg) translate(0,0);}
+    to{transform:rotate(3deg) translate(0,5px);}
 }
 </style>
 
