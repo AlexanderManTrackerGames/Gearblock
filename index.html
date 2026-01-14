@@ -30,17 +30,17 @@ const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#
 
 // Create multiple panels
 const consoleContainer = document.getElementById("console-container");
-const panelCount = 6; // number of panels
+const panelCount = 6;
 
 for (let i = 0; i < panelCount; i++) {
     const panel = document.createElement("pre");
     panel.className = "hacker-panel";
-    panel.style.top = Math.random() * 80 + "vh";
+    panel.style.position = "absolute"; // changed from fixed
+    panel.style.top = Math.random() * 2000 + "px"; // allow scrolling
     panel.style.left = Math.random() * 90 + "vw";
     panel.style.fontSize = (12 + Math.random()*8) + "px";
     consoleContainer.appendChild(panel);
 
-    // Scroll random code
     function randomCodeLine() {
         let line = '';
         const len = Math.floor(Math.random()*60) + 20;
@@ -63,13 +63,12 @@ for (let i = 0; i < panelCount; i++) {
 }
 </script>
 
-<!-- STYLES -->
 <style>
 body.collapsebody {
     background:black;
     color:#0f0;
     font-family: monospace;
-    overflow-x:hidden;
+    overflow-y: scroll; /* allow vertical scrolling */
 }
 
 .glitch, .superglitch, .glitcheffect {
@@ -81,16 +80,12 @@ body.collapsebody {
 .superglitch { animation:glitch .08s infinite alternate; }
 
 #console-container {
-    position:fixed;
+    position: relative; /* changed from fixed */
     width:100%;
-    height:100%;
-    pointer-events:none;
-    overflow:hidden;
-    z-index:999;
+    height:auto; /* allow container height to expand */
 }
 
 .hacker-panel {
-    position:absolute;
     color:#0f0;
     background:rgba(0,0,0,0.1);
     padding:5px;
