@@ -1,31 +1,96 @@
-🔥 THE COLLAPSE — MIT PURGE
-status: corrupted
-auth: revoked
-staff: erased
+💥 Gearblock SMP – Reborn After the Purge 💀
+“Fuck off hackers.” – Gearblock, 2026
+⚡ What Happened?
 
-what the hell just happened:
+A massive unified purge event hit the server —
+thanks to an absolute gremlin of a hacker who decided touching grass was optional.
 
-all staff banned / deleted / nuked
+✔ The good news
 
-every player force‑OP’d
+💾 We rolled the world back to a backup
 
-perms wide open
+🛡 Players didn’t lose their stuff (mostly)
 
-griefing allowed (not like anyone can stop it)
+🧱 Community didn’t grief anything while chaos reigned
+(shoutout to the real ones)
 
-plugins fighting for their lives
+🔥 Server lives to fight again
 
-world already dying
+🛠 Server State After Purge
 
-this is NOT an official update
+Version restored
 
-no admin pushed this
-no dev approved it
-someone else is in here
+Core plugins stable
 
-if you’re still reading this
+Player data mostly intact
 
-you’re already too late
+No more free OP
+(it was funny, but once was enough lol)
 
-welcome to the purge
-goodbye gearblock
+🚧 Gearblock 1.0 Is Coming
+
+We are rebuilding and expanding.
+
+Incoming features & planned updates
+
+🏰 New spawn rebuild
+
+🎮 New minigames + event arenas
+
+📦 Better storage & backups (seriously…)
+
+🧩 Plugin cleanup and optimization
+
+🧑‍💻 Stronger security
+(trust issues? yeah, we got them now)
+
+🌐 About the Project
+
+This repo is:
+
+Source for the Gearblock website
+
+Storage for configs, plugin settings, and server assets
+
+Documentation for admin notes, updates & events
+
+Home of patch notes, chaos logs, and lore
+
+🧩 Community Rules
+
+We don’t ask for much:
+
+Don’t grief.
+
+Don’t hack.
+
+Don’t dupe the universe into oblivion.
+
+Touch grass occasionally.
+
+👥 Credits
+
+✨ Built by the Gearblock Community
+
+🧱 Server Staff, Builders, Devs & Chaos Survivors
+
+Special thanks to:
+
+Everyone who didn’t destroy the world when you had OP
+
+Backups
+
+Therapy
+
+💬 Join Us
+
+Discord: https://discord.gg/KWtAD5hbMj
+Minecraft Version: Java 1.21.1+
+Status: Alive, barely, but thriving
+
+🦴 TL;DR
+
+Purge happened.
+Hacker sucks.
+Backup saved us.
+Gearblock 1.0 will slap.
