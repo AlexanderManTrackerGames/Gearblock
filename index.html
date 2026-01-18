@@ -1,150 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Collapse</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gearblock Minecraft Server</title>
 
-<link rel="icon" type="image/png" href="media/favi2con.png">
-<link rel="stylesheet" href="media/style.css">
-<link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="media/favicon.png">
+  <link rel="stylesheet" href="media/style.css">
+  <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="collapsebody">
+
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- NAVBAR -->
+<nav class="desktop_navbar">
+  <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+  <a href="#more" class="desktop_navbar_link scroll">Features</a>
+  <a href="#gm" class="desktop_navbar_link scroll">Gamemodes</a>
+  <a href="#rules" class="desktop_navbar_link scroll">Rules</a>
+  <a href="#hof" class="desktop_navbar_link scroll">Hall of Fame</a>
+  <a href="#discord" class="desktop_navbar_link scroll">Community</a>
+  <a href="#staff" class="desktop_navbar_link scroll">Staff</a>
+  <div class="desktop_navbar_link2_div">
+    <a href="#join" class="desktop_navbar_link2 scroll">Join Gearblock</a>
+  </div>
+</nav>
 
 <!-- HERO -->
-<div class="main1 glitch superglitch falling">
-  <img class="main1_logo broken" src="media/logo.png" alt="Gearblock" style="filter:invert(1) hue-rotate(180deg) contrast(300%);">
-  <div class="main1_description shattered">
-    <a class="glitchybig">G̴E̷A̷R̸B̶L̶O̷C̶K̵ C̵O̶M̸P̴R̷O̶M̶I̷S̴E̶D̷</a><br>
-    <a class="main1_actcent glitch">s̶͓t̵͓a̶͓f̸͓f̸͓ ̴͓b̶͓a̶͓n̴͓n̵͓e̴͓d̷</a>
+<div class="main1">
+  <img class="main1_logo" src="media/logo.png" alt="Gearblock">
+  <div class="main1_description">
+    <a>Minecraft,<br>done</a>
+    <a class="main1_actcent">Fun</a><a>.</a>
   </div>
-</div>
 
-<!-- CORRUPT SERVER STATUS -->
-<div class="panelmsg glitcheffect falling">
-<p class="breaktext">
-S̷̯͝Y̶̬̑Ś̴̗T̷̜͌E̴̙̾M̸͎̋ ̴̞̚B̴̗̕R̶͎̉È̵̝Ȁ̷̪C̸̤͛H̴͈͠ ███  
-STAFF = BANNED / REMOVED / WIPED  
-PLAYERS = FORCE OPPED (NO CONTROL)  
-PLUGIN WALLS = DOWN  
-CONSOLE = HIJACKED  
-WORLD = CORRUPTING  
-</p>
+  <button class="main1_ipcopier" onclick="copyText()" type="button">
+    <span class="main1_ipcopier_text1">gearblock.exaroton.me</span><br>
+    <span class="main1_ipcopier_text2">Click to copy</span>
+  </button>
 </div>
-
-<!-- MULTIPLE HACKER PANELS -->
-<div id="console-container"></div>
 
 <script>
-// Hacker code characters
-const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:',.<>?/`~";
-
-// Create multiple panels
-const consoleContainer = document.getElementById("console-container");
-const panelCount = 8;
-
-for (let i = 0; i < panelCount; i++) {
-    const panel = document.createElement("pre");
-    panel.className = "hacker-panel falling";
-    panel.style.position = "absolute"; 
-    panel.style.top = Math.random() * 2000 + "px"; 
-    panel.style.left = Math.random() * 90 + "vw";
-    panel.style.fontSize = (12 + Math.random()*8) + "px";
-    panel.style.animationDelay = Math.random()*3 + "s";
-    consoleContainer.appendChild(panel);
-
-    function randomCodeLine() {
-        let line = '';
-        const len = Math.floor(Math.random()*60) + 20;
-        for (let j = 0; j < len; j++) {
-            line += chars.charAt(Math.floor(Math.random()*chars.length));
-        }
-        return line;
-    }
-
-    function updatePanel() {
-        panel.textContent = "";
-        const lines = 20;
-        for (let k = 0; k < lines; k++) {
-            panel.textContent += randomCodeLine() + "\n";
-        }
-    }
-
-    setInterval(updatePanel, 150 + Math.random()*100);
-    updatePanel();
+function copyText() {
+  navigator.clipboard.writeText("gearblock.exaroton.me");
 }
 </script>
 
-<style>
-body.collapsebody {
-    background:black;
-    color:#0f0;
-    font-family: monospace;
-    overflow-y: scroll;
-}
+<!-- UPDATE SECTION -->
+<div id="update"></div>
+<div class="main2">
+  <a class="headline">Gearblock v0.9 — Purge Recovery Update 💀</a>
 
-/* Falling apart effects */
-.falling {
-    animation: fallApart 3s infinite linear alternate;
-    display:inline-block;
-}
-.broken { filter:blur(.5px) brightness(300%); }
-.shattered { letter-spacing:6px; }
-.breaktext { opacity:.85; }
+  <div class="main2_features_div" style="max-width:900px; margin:auto; text-align:center;">
 
-/* glitch */
-.glitch, .superglitch, .glitcheffect {
-    text-shadow:2px 0 red, -2px 0 #00ff00, 0 2px #00ffff;
-    animation:glitch .18s infinite;
-}
+    <div class="main2_feature">
+      <a class="main2_feature_headline">💀 The Purge — Fuck Off Hackers</a>
+      <a class="main2_feature_text">
+        A hacker attempted to destroy the server.<br>
+        Player data was wiped, chaos spread, and everyone magically had OP.<br>
+        **BUT WE RECOVERED.** The world was restored from backups.<br>
+        Thanks to everyone who didn’t grief when the world burned.
+      </a>
+    </div>
 
-.glitchybig { font-size:2.6rem; letter-spacing:3px; }
-.superglitch { animation:glitch .08s infinite alternate; }
+    <div class="main2_feature">
+      <a class="main2_feature_headline">🧱 World & Player Rollback</a>
+      <a class="main2_feature_text">
+        Backups saved us — builds, inventories, and most progress restored.<br>
+        Security upgrades added so it DOESN’T happen again.
+      </a>
+    </div>
 
-.panelmsg {
-    padding:1rem;
-    border:1px dashed #0f0;
-    margin:3rem auto;
-    width:90%;
-    max-width:600px;
-    background:rgba(0,0,0,0.4);
-}
+    <div class="main2_feature">
+      <a class="main2_feature_headline">🚀 Gearblock 1.0 Sneak Peek</a>
+      <a class="main2_feature_text">
+        A complete rebuild and relaunch is coming soon!<br>
+        New map, fresh economy, cleaner ranks, and brand new progression.<br>
+        Gamemodes under development:<br>
+        REDACTED
+      </a>
+    </div>
 
-#console-container {
-    position: relative;
-    width:100%;
-    height:auto;
-}
+    <div class="main2_feature">
+      <a class="main2_feature_headline">🎮 BedWars Revamp</a>
+      <a class="main2_feature_text">Maps, mechanics, items — rebuilt from nothing.</a>
+    </div>
 
-.hacker-panel {
-    color:#0f0;
-    background:rgba(0,0,0,0.1);
-    padding:5px;
-    border:1px solid #0f0;
-    overflow:hidden;
-    line-height:1;
-    white-space:pre;
-    user-select:none;
-    pointer-events:none;
-    mix-blend-mode:screen;
-}
+    <div class="main2_feature">
+      <a class="main2_feature_headline">🕵️ Hide & Seek — New Maps</a>
+      <a class="main2_feature_text">Fresh maps + more hiding routes.</a>
+    </div>
 
-/* Keyframes */
-@keyframes glitch {
-    0%{transform:translate(0,0) skew(0deg);}
-    20%{transform:translate(-3px,3px) skew(-4deg);}
-    40%{transform:translate(4px,-3px) skew(3deg);}
-    60%{transform:translate(-2px,1px) skew(2deg);}
-    80%{transform:translate(3px,-1px) skew(-2deg);}
-    100%{transform:translate(0,0) skew(0deg);}
-}
+    <div class="main2_feature">
+      <a class="main2_feature_headline">🥚 EggWars Offline</a>
+      <a class="main2_feature_text">Major rework — releasing in v1.0.</a>
+    </div>
 
-@keyframes fallApart {
-    from{transform:rotate(0deg) translate(0,0);}
-    to{transform:rotate(3deg) translate(0,5px);}
-}
-</style>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div id="more"></div>
+<div class="main2">
+  <a class="headline">What We Offer</a>
+
+  <div class="main2_features_div">
+
+    <div class="main2_feature">
+      <img src="media/Survival.png" class="feature_img">
+      <a class="main2_feature_headline">Survival SMP</a>
+      <a class="main2_feature_text">Economy, claims, ranks & quests.</a>
+    </div>
+
+    <div class="main2_feature">
+      <img src="media/pvp.png" class="feature_img">
+      <a class="main2_feature_headline">Minigames</a>
+      <a class="main2_feature_text">BedWars, TNT Run, Spleef + more.</a>
+    </div>
+
+    <div class="main2_feature">
+      <img src="media/Pvp1.png" class="feature_img">
+      <a class="main2_feature_headline">PvP</a>
+      <a class="main2_feature_text">Fair fights, kits, leaderboards.</a>
+    </div>
+
+    <div class="main2_feature">
+      <img src="media/Creative.png" class="feature_img">
+      <a class="main2_feature_headline">Creative</a>
+      <a class="main2_feature_text">Plot-based free building.</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- STAFF -->
+<div id="staff"></div>
+<div class="main5">
+  <a class="headline">Gearblock Staff</a>
+
+  <div class="main5_staff_div">
+
+    <div class="staff_row">
+      <div class="main5_admins_div main5_admins_dev_type2 uniform_card">
+        <img class="main5_admins_img" src="media/001.png" alt="Owner">
+        <div class="main5_admins_description_div">
+          <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
+          <a class="main5_admins_description_title">6kamali</a>
+        </div>
+      </div>
+
+      <div class="main5_admins_div main5_admins_dev_type2 uniform_card">
+        <img class="main5_admins_img" src="media/ethan2.png" alt="Co-Owner">
+        <div class="main5_admins_description_div">
+          <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Co-Owner]</a>
+          <a class="main5_admins_description_title">Ethancp2020</a>
+        </div>
+      </div>
+
+      <div class="main5_admins_div main5_admins_dev_type2 uniform_card">
+        <img class="main5_admins_img" src="media/Void.png" alt="Admin">
+        <div class="main5_admins_description_div">
+          <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Retired Co-Owner]</a>
+          <a class="main5_admins_description_title">Voids</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main5_supporter_div">
+      <div class="main5_supporters_div uniform_card">
+        <img class="main5_supporters_img" src="media/adwen.png" alt="Mod">
+        <div class="main5_supporters_description_div">
+          <a class="main5_supporters_description_rank">[Moderator]</a>
+          <a class="main5_supporters_description_title">A_Adwen</a>
+        </div>
+      </div>
+
+      <div class="main5_supporters_div uniform_card">
+        <img class="main5_supporters_img" src="media/ejp.png" alt="Trial Mod">
+        <div class="main5_supporters_description_div">
+          <a class="main5_supporters_description_rank">[Trial Mod]</a>
+          <a class="main5_supporters_description_title">J3nson</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- JOIN -->
+<div id="join"></div>
+<div class="main3">
+  <a class="headline">How to Join</a>
+
+  <div class="main3_join_div_div">
+    <div class="main3_join_div">
+      <a class="main3_join_title">Java</a>
+      <a>IP: gearblock.exaroton.me</a>
+      <a>Version: 1.21.11+</a>
+    </div>
+    <div class="main3_join_div">
+      <a class="main3_join_title">Bedrock</a>
+      <a>IP: gearblock.exaroton.me</a>
+      <a>Port: 19132</a>
+    </div>
+  </div>
+</div>
+
+<footer class="copyright_div">
+  <a class="copyright">© Gearblock Minecraft Server</a>
+</footer>
 
 </body>
 </html>
